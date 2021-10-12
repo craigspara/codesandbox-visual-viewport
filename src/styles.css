@@ -1,0 +1,50 @@
+:root {
+  --inline-size: 100%;
+  --max-inline-size: 20rem;
+}
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.wrapper {
+  inline-size: var(--inline-size);
+  max-inline-size: var(--max-inline-size);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+.specs {
+  font-size: 0.75rem;
+}
+
+input {
+  inline-size: var(--inline-size);
+  max-inline-size: var(--max-inline-size);
+  block-size: 3rem;
+  font-size: 1.25rem;
+  padding-inline-start: 2rem;
+  padding-inline-end: 1rem;
+  margin-block-start: 1.5rem;
+}
+
+.panel {
+  inline-size: var(--inline-size);
+  max-inline-size: var(--max-inline-size);
+  list-style: none outside;
+  text-align: start;
+  padding-inline-start: 0;
+  border: 1px solid gray;
+  border-radius: 4px;
+  overflow-y: hidden;
+  transition: max-block-size ease-out 2s;
+}
+
+.panel__item {
+  inline-size: var(--inline-size);
+  padding: 0.5rem;
+}
