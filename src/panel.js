@@ -10,7 +10,7 @@ const Panel = forwardRef((props, ref) => {
     <div className="panel-wrapper" ref={ref}>
       <ul className="panel" ref={panelRef}>
         <li className="panel__item" tabIndex="0">
-          {`panelHeight is ${panelHeight}px`}
+          One: {`panelHeight is ${panelHeight}px`}
         </li>
         <li className="panel__item" tabIndex="0">
           Two
@@ -38,6 +38,66 @@ const Panel = forwardRef((props, ref) => {
         </li>
         <li className="panel__item" tabIndex="0">
           Ten
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Eleven
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Twelve
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Thirteen
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Fourteen
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Fifteen
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Sixteen
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Seventeen
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Eighteen
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Ninteen
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Twenty
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Twenty one
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Twenty two
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Twenty three
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Twenty four
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Twenty five
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Twenty six
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Twenty seven
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Twenty eight
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Twenty nine
+        </li>
+        <li className="panel__item" tabIndex="0">
+          Thirty
         </li>
       </ul>
     </div>

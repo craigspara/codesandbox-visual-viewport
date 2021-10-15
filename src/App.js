@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useRef } from "react";
 import Panel from "./panel";
 import "./styles.css";
 import { useMaxPanelHeight } from "./useMaxPanelHeight";

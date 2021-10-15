@@ -2,6 +2,15 @@
   --inline-size: 100%;
   --max-inline-size: 20rem;
 }
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin-block-start: 2.5rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -19,7 +28,15 @@
 }
 
 .specs {
+  position: fixed;
+  inline-size: 100%;
+  inset-block-start: 0;
   font-size: 0.75rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+  margin: 0;
+  background-color: white;
+  border-block-end: 1px solid gray;
 }
 
 input {
@@ -29,7 +46,6 @@ input {
   font-size: 1.25rem;
   padding-inline-start: 2rem;
   padding-inline-end: 1rem;
-  margin-block-start: 1.5rem;
 }
 
 .panel {
@@ -40,7 +56,7 @@ input {
   padding-inline-start: 0;
   border: 1px solid gray;
   border-radius: 4px;
-  overflow-y: hidden;
+  overflow-y: scroll;
   transition: max-block-size ease-out 2s;
 }
 
