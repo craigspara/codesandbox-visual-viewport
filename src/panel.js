@@ -1,16 +1,17 @@
 import { forwardRef } from "react";
 import { useMaxPanelHeight } from "./useMaxPanelHeight";
 
+// TODO: Does this need to be a forwardRef
 const Panel = forwardRef((props, ref) => {
-  const { panelRef, getPanelHeight } = useMaxPanelHeight();
+  const panelRef = useMaxPanelHeight();
 
-  const panelHeight = getPanelHeight();
+  // const panelHeight = getPanelHeight();
 
   return (
     <div className="panel-wrapper" ref={ref}>
       <ul className="panel" ref={panelRef}>
         <li className="panel__item" tabIndex="0">
-          One: {`panelHeight is ${panelHeight}px`}
+          One
         </li>
         <li className="panel__item" tabIndex="0">
           Two
