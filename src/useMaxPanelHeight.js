@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
  * in a combobox based on the visual viewport. Visual viewport size changes when
  * user open the mobile keyboard by focusing on the combobox input
  *
- * @returns {object.<object|function|number>}
+ // * @returns {object <object|function|number>}
  */
 export const useMaxPanelHeight = () => {
   const panelRef = useRef(null);
@@ -31,7 +31,7 @@ export const useMaxPanelHeight = () => {
    */
   const handleVisualViewportResize = () => {
     setVisualViewportHeight(Math.round(window?.visualViewport?.height));
-    setMaxpanelHeight();
+    setMaxPanelHeight();
   };
 
   /**
@@ -46,6 +46,7 @@ export const useMaxPanelHeight = () => {
     /**
      * @returns {number}
      */
+    // iOS 15 has a bug when the address bar is at the bottom of the screen and the mobile keyboard is open. The VisualViewport is incorrectly not including the height of the floating address bar. This causes the floating address bar to overlay the last 30(ish) pixels of the  open panel.
     const getAvailableSpaceForPanel = () => {
       return (
         visualViewport?.height -
@@ -54,9 +55,7 @@ export const useMaxPanelHeight = () => {
       );
     };
 
-    const availableSpaceForPanel = getAvailableSpaceForPanel();
-
-    return availableSpaceForPanel;
+    return Math.round(getAvailableSpaceForPanel());
   };
 
   // TODO: Add check for --panel-max-block-size. If missing, add it with a default value.
@@ -65,7 +64,7 @@ export const useMaxPanelHeight = () => {
    * to the max-block-size available for the panel
    * @returns {undefined}
    */
-  const setMaxpanelHeight = () => {
+  const setMaxPanelHeight = () => {
     return (
       panelRef &&
       panelRef?.current?.style.setProperty(
@@ -80,7 +79,13 @@ export const useMaxPanelHeight = () => {
       "resize",
       handleVisualViewportResize
     );
+
   });
+
+  useEffect(() => {
+    console.count("Initial load useEffect");
+    setMaxPanelHeight();
+  }, []);
 
   return {
     panelRef,
