@@ -59,7 +59,7 @@ input {
   border: 1px solid gray;
   border-radius: 4px;
   overflow-y: scroll;
-  transition: max-block-size ease-out 2s;
+  /*transition: max-block-size ease-out 300ms;*/
 }
 
 .panel__item {
