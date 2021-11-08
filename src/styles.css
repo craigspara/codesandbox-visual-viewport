@@ -2,6 +2,7 @@
   --inline-size: 100%;
   --max-inline-size: 20rem;
   --panel-max-block-size: none;
+  --panel-block-margin-end-value: 24;
 }
 
 body {
